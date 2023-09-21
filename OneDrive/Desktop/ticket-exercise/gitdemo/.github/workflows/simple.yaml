@@ -4,7 +4,7 @@ on: [push]
 
 jobs:
   run-shell-command:
-  runs-on: ubuntu-18.04
+  runs-on: ubuntu-latest
   steps
 - name: checkout
   uses: action/checkout@v3
