@@ -1,7 +1,9 @@
 name: shell commands
 
 on: [push]
-
+ENV:
+AWS_ACCESS_KEY_ID:${{secret.ACCESS_KEY}}
+AWS__SECRET_ACCESS_KEY_ID:${{secret.SECRET_KEY}}
 
 jobs:
   run-shell-command:
