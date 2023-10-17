@@ -1,7 +1,7 @@
 #create eks cluster
 resource "aws_eks_cluster" "demo" {
   name     = "demo"
-  role_arn = data.terraform_remote_state.vpc.outputs
+  role_arn = data.terraform_remote_state.vpc.outputs.node_role
 
 
   vpc_config {

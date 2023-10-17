@@ -22,10 +22,10 @@ resource "aws_iam_role" "nodes" {
 
 
 resource "aws_iam_policy_attachment" "nodes-AmazonEKSWorkerNodePolicy" {
-  name = "nodes"
+  name       = "nodes"
   for_each   = toset(local.node_policies)
   policy_arn = each.value
-  roles      = aws_iam_role.nodes.name
+  roles      = [aws_iam_role.nodes.name]
 
 }
 
@@ -38,9 +38,9 @@ resource "aws_iam_role" "demo" {
 }
 
 resource "aws_iam_policy_attachment" "demo-AmazonEKSClusterPolicy" {
-  name = "demo"
+  name       = "demo"
   for_each   = toset(local.eks_policies)
   policy_arn = each.value
-  roles      = aws_iam_role.demo.name
+  roles      = [aws_iam_role.demo.name]
 
 }
