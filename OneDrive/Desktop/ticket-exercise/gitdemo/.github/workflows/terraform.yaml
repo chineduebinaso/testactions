@@ -8,7 +8,7 @@ runs-on: ubuntu-latest
 steps:
 -name: checkout
 uses:actions/checkout@v2
--name setup tarrform
+-name setup terraform
 uses: hashicprp/setuip-terrfome@v2
 with:
 terraform_version:1.1.9
