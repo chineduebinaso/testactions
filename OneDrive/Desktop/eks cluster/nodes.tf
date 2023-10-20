@@ -45,15 +45,6 @@ resource "aws_eks_node_group" "private-nodes" {
 }
 
 
-#depends_on = [
-#   aws_iam_role_policy_attachment.demo-AmazonEKSWorkerNodePolicy,
-#  aws_iam_role_policy_attachment.demo-AmazonEKS_CNI_Policy,
-# aws_iam_role_policy_attachment.demo-AmazonEC2ContainerRegistryReadOnly,
-#]
-#}
-# Specify dependencies if needed (e.g., dependencies on VPC resources)
 
-# subnet_ids attribute should NOT be included here
-# Uncomment and configure capacity_type and instance_types as needed
 
 
