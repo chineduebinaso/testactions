@@ -15,7 +15,7 @@ resource "aws_eks_node_group" "private-nodes" {
 
   subnet_ids = [
     data.terraform_remote_state.vpc.outputs.private[0], data.terraform_remote_state.vpc.outputs.private[1],
-    data.terraform_remote_state.vpc.outputs.public[0], data.terraform_remote_state.vpc.outputs.public[1]
+    #data.terraform_remote_state.vpc.outputs.public[0], data.terraform_remote_state.vpc.outputs.public[1]
   ]
 
 
