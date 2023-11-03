@@ -10,7 +10,6 @@ locals {
     "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly",
     "arn:aws:iam::aws:policy/AmazonEC2FullAccess"
   ]
-
 }
 
 #role and policies for node groups
@@ -32,7 +31,7 @@ resource "aws_iam_policy_attachment" "nodes-AmazonEKSWorkerNodePolicy" {
 
 #role and policies for eks cluster
 resource "aws_iam_role" "demo" {
-  name               = "vr.node_role_name"
+  name               = "var.cluster_role_name"
   assume_role_policy = data.aws_iam_policy_document.eks_assume_role.json
 
 }
